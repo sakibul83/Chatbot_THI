@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Charlie - TH Ingolstadt Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Assuming style.css is in the same folder -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div id="chat-container">
+        <div id="chat-header">
+            <h1>Chatbot Charlie</h1>
+            <p>Your TH Ingolstadt Assistant</p>
+        </div>
+
+        <div id="chat-log" aria-live="polite" aria-atomic="true"></div>
+
+        <div id="user-input">
+            <input type="text" id="user-message" placeholder="Type your message..." aria-label="Type your message" />
+            <button id="send-button" aria-label="Send message">Ask</button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script> <!-- Assuming script.js is in the same folder -->
+    
+    <script>
+        // Initialize particles.js background
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 100 },
+                color: { value: '#ffffff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                move: { speed: 2 }
+            }
+        });
+    </script>
+</body>
+</html>
+

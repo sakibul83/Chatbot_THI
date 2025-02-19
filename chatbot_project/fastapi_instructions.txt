@@ -1,0 +1,70 @@
+
+# How to Start the FastAPI Server
+
+## Prerequisites
+Ensure you have Python 3.8+ installed on your machine. You can check your Python version by running:
+
+```bash
+python3 --version
+```
+
+Install FastAPI and Uvicorn if you haven't done so yet:
+
+```bash
+pip install fastapi uvicorn
+```
+
+## Navigate to the Project Directory
+1. Open your terminal.
+2. Change to the directory where your `chatbot.py` file is located. For example:
+
+   ```bash
+   cd /Users/sakibul/Downloads/chatbot_project
+   ```
+
+## Check File Presence
+Make sure `chatbot.py` is present in the directory by running:
+
+```bash
+ls
+```
+
+## Run the FastAPI Server
+To start the server, use the following command:
+
+```bash
+uvicorn chatbot:app --reload
+```
+
+Alternatively, you can run it using Python:
+
+```bash
+python -m uvicorn chatbot:app --reload
+```
+
+## Access the API Documentation
+Once the server is running, you can access the interactive API documentation by visiting:
+
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+## Stopping the Server
+To stop the server, press `CTRL + C` in the terminal where the server is running.
+
+## If You Encounter Errors
+If you see an error like "Could not import module 'chatbot'", ensure:
+- You are in the correct directory.
+- There are no naming conflicts (i.e., a folder named `chatbot` in the same directory).
+
+You can create an empty `__init__.py` file if needed:
+
+```bash
+touch __init__.py
+```
+
+## Running with Absolute Path (if needed)
+If the server fails to start with the usual command, you can specify the absolute path:
+
+```bash
+python -m uvicorn /Users/sakibul/Downloads/chatbot_project/chatbot:app --reload
+```
+
